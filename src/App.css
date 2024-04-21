@@ -1,38 +1,145 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  background: hsl(233, 47%, 7%);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+.cardtext {
+  background: hsl(244, 38%, 16%);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  max-width: 50%;
+}
+.cardtext p , h1 ,table{
+  width: 70%;
+}
+.cardtext >table > tbody > tr >th {
+  /* padding-right: 100px; */
+  text-align: left;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cardtext >table > tbody > tr >td {
+  color:hsla(0, 0%, 100%, 0.6);
+  text-align: left;
+}
+
+.cardimage{
+  background-color: hsl(277, 64%, 61%);
+  height: 100%;
+}
+img {
+  filter: opacity(50%);
+}
+h1 {
+  text-align: left;
+}
+p{
+  text-align: left;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+table {
+  display: flex;
+}
+.cardimage img {
+  width: 100%;
+  height: auto;
+}
+
+
+.cardtext table tbody {
+  display: flex;
+  flex-flow : row;
+  width: 100%;
+}
+
+.cardtext table tr {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+@media (min-width:768px) and (max-width: 1100px) { 
+  .cardtext h1 {
+    margin: 0;
+    font-size: 30px !important;
   }
-  to {
-    transform: rotate(360deg);
+  .cardtext p , h1 , table  {
+    width: 85%;
   }
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 512px) { 
+  .cardtext h1 , p{
+    margin-bottom: 0;
+  }
+  .cardtext h1 {
+    font-size: 20px !important;
+  }
+  .cardtext p {
+    font-size: 13px !important;
+  }
+  .cardtext table td {
+    font-size: 13px !important;
+  }
+  .cardtext table th {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 768px) {
+  .App {
+    padding: 15%;
+  }
+  .card {
+    flex-flow: column-reverse;
+  }
+  .cardtext {
+    flex:1;
+    max-width: 100% !important;
+  }
+  .cardimage {
+    flex:1;
+  }
+  .cardtext h1 , p{
+    text-align: center !important;
+  }
+   .cardtext table {
+    display: block;
+    width: 100%;
+  }
+  .cardtext h1 {
+    font-size: 25px;
+  }
+  .cardtext table tbody {
+    flex-flow : column;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .cardtext table td,
+  .cardtext table th {
+    flex: 0 0 50%; /* Two columns on small screens */
+    text-align: center !important;
+  }
+
 }
