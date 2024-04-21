@@ -26,7 +26,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### Links
 
-- Live Site URL: [Vercel](https://qr-code-component-blush-five.vercel.app/)
+- Live Site URL: [Vercel](stats-preview-card-component-lazraec5o.vercel.app)
 
 ## My process
 
